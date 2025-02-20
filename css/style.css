@@ -4390,12 +4390,12 @@ spline-viewer {
     white-space: nowrap;
     overflow: hidden;
     min-height: 1.2em;
-    font-size: 48px; /* Mismo tamaño que el h2 del título */
-    font-weight: 400; /* Peso normal como el título */
+    font-size: 60px; /* Mismo tamaño que el h2 del título */
+    font-weight: 800; /* Peso normal como el título */
     color: #fff;
     letter-spacing: -1px;
     line-height: 1.1;
-    margin-top: -15px; /* Reducir espacio con el título superior */
+    margin-top: -20px; /* Reducir espacio con el título superior */
     margin-bottom: 30px;
     position: relative;
 }
