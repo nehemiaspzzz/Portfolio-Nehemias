@@ -788,6 +788,18 @@
     <!-- ashley js -->
     <script src="js/main.js"></script>
 
+    <script>
+    document.addEventListener('scroll', function() {
+        const aboutSection = document.querySelector('.about');
+        aboutSection.classList.add('is-scrolling');
+        
+        clearTimeout(window.scrollTimeout);
+        window.scrollTimeout = setTimeout(function() {
+            aboutSection.classList.remove('is-scrolling');
+        }, 150);
+    }, { passive: true });
+    </script>
+
 </body>
 
 </html>

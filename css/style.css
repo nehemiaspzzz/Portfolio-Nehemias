@@ -4397,27 +4397,3 @@ spline-viewer {
 .about .mil-spline-wrapper {
     overflow: hidden;
 }
-
-/* Hacer el logo de Spline extremadamente pequeño */
-.about .mil-spline-wrapper spline-viewer::part(logo) {
-    transform: scale(0.1) !important;
-    opacity: 0.1 !important;
-    position: fixed !important;
-    bottom: -50px !important;
-    right: -50px !important;
-}
-
-/* Alternativa usando más selectores */
-.about .mil-spline-wrapper spline-viewer::shadow-part(logo),
-.about .mil-spline-wrapper spline-viewer[data-html2canvas-ignore] div {
-    transform: scale(0.05) !important;
-    opacity: 0.1 !important;
-    position: fixed !important;
-    bottom: -100px !important;
-    right: -100px !important;
-}
-
-/* Contenedor con overflow hidden */
-.about .mil-spline-wrapper {
-    overflow: hidden;
-}
