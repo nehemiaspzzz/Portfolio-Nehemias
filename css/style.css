@@ -4348,6 +4348,7 @@ spline-viewer {
     position: relative;
     z-index: 2;
     text-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    text-align: justify;
 }
 
 /* Estilo para el contenedor del texto */
@@ -4380,20 +4381,39 @@ spline-viewer {
     background: rgba(0, 0, 0, 0.2); /* Fondo oscuro sutil */
 }
 
-/* Ocultar el logo de Spline */
-.about .mil-spline-wrapper spline-viewer::part(logo) {
-    display: none !important;
+.typewriter-container {
+    min-height: 1.5em;
+    margin-bottom: 20px;
 }
 
-/* O si el anterior no funciona, intenta con esto */
-.about .mil-spline-wrapper spline-viewer::shadow-part(logo),
-.about .mil-spline-wrapper spline-viewer[data-html2canvas-ignore] div {
-    display: none !important;
-    opacity: 0 !important;
-    visibility: hidden !important;
-}
-
-/* Asegurarse que el contenedor no muestre el logo */
-.about .mil-spline-wrapper {
+.typewriter-text {
+    white-space: nowrap;
     overflow: hidden;
+    min-height: 1.2em;
+    font-size: 48px; /* Mismo tamaño que el h2 del título */
+    font-weight: 400; /* Peso normal como el título */
+    color: #fff;
+    letter-spacing: -1px;
+    line-height: 1.1;
+    margin-top: -15px; /* Reducir espacio con el título superior */
+    margin-bottom: 30px;
+    position: relative;
+}
+
+/* Removemos el borde derecho y creamos un pseudo-elemento para el cursor */
+.typewriter-cursor {
+    display: inline-block;
+    width: 3px;
+    height: 1em;
+    background-color: #fff;
+    margin-left: 2px;
+    animation: blink-caret 0.75s step-end infinite;
+    vertical-align: middle;
+    position: relative;
+    top: -2px;
+}
+
+@keyframes blink-caret {
+    from, to { opacity: 0 }
+    50% { opacity: 1 }
 }

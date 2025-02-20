@@ -1050,3 +1050,53 @@ $(function () {
     });
 
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+    const words = [
+        "Experiencia",
+        "Profesionalismo",
+        "Creatividad"
+    ];
+    const speed = 100;
+    const deleteSpeed = 50;
+    const pauseTime = 1500;
+    let wordIndex = 0;
+    let charIndex = 0;
+    let isDeleting = false;
+    
+    function typeEffect() {
+        const currentWord = words[wordIndex];
+        const typewriter = document.querySelector(".typewriter-text");
+        
+        if (isDeleting) {
+            charIndex--;
+            typewriter.innerHTML = currentWord.substring(0, charIndex) + '<span class="typewriter-cursor"></span>';
+        } else {
+            charIndex++;
+            typewriter.innerHTML = currentWord.substring(0, charIndex) + '<span class="typewriter-cursor"></span>';
+        }
+        
+        let typeSpeed = isDeleting ? deleteSpeed : speed;
+        
+        if (!isDeleting && charIndex === currentWord.length) {
+            typeSpeed = pauseTime;
+            isDeleting = true;
+        } else if (isDeleting && charIndex === 0) {
+            isDeleting = false;
+            wordIndex = (wordIndex + 1) % words.length;
+        }
+        
+        setTimeout(typeEffect, typeSpeed);
+    }
+    
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                typeEffect();
+                observer.unobserve(entry.target);
+            }
+        });
+    });
+    
+    observer.observe(document.querySelector('.typewriter-text'));
+});
