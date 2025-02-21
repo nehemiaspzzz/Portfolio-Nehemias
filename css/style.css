@@ -2332,7 +2332,9 @@ services
 .mil-service-card-sm {
   position: relative;
   display: block;
-  padding: 60px 30px;
+  padding: 40px 30px; /* Reducir el padding vertical */
+  height: auto; /* Altura automática */
+  margin-bottom: 30px;
 }
 .mil-service-card-sm p {
   opacity: 0;
@@ -2498,10 +2500,11 @@ team
 
 ------------------------------------------- */
 .mil-team-card {
-  border-radius: 20px;
-  position: relative;
-  overflow: hidden;
-  padding-bottom: 130%;
+    border-radius: 20px;
+    position: relative;
+    overflow: hidden;
+    padding-bottom: 65%; /* Más rectangular */
+    margin-bottom: 30px; /* Espacio entre tarjetas */
 }
 .mil-team-card:after {
   content: "";
@@ -4416,4 +4419,12 @@ spline-viewer {
 @keyframes blink-caret {
     from, to { opacity: 0 }
     50% { opacity: 1 }
+}
+
+/* Ajustar el tamaño de las columnas para tarjetas más grandes */
+@media (min-width: 992px) {
+    .col-lg-4 {
+        flex: 0 0 33.333333%;
+        max-width: 33.333333%;
+    }
 }
