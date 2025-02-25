@@ -21,6 +21,14 @@
     <title>Nehemias Pérez Portfolio</title>
     <link rel="icon" href="img/logo.png">
 
+    <!-- Agregar el script de EmailJS en el head -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            emailjs.init("tu_public_key");
+        })();
+    </script>
+
 </head>
 
 <body>
@@ -44,14 +52,14 @@
         <div class="mil-preloader">
             <div class="mil-preloader-animation">
                 <div class="mil-pos-abs mil-animation-1">
-                    <p class="mil-h3 mil-muted mil-thin">Pioneering</p>
-                    <p class="mil-h3 mil-muted">Creative</p>
-                    <p class="mil-h3 mil-muted mil-thin">Excellence</p>
+                    <p class="mil-h3 mil-muted mil-thin">Innovador</p>
+                    <p class="mil-h3 mil-muted">Creativo</p>
+                    <p class="mil-h3 mil-muted mil-thin">Reflexivo</p>
                 </div>
                 <div class="mil-pos-abs mil-animation-2">
                     <div class="mil-reveal-frame">
                         <p class="mil-reveal-box"></p>
-                        <p class="mil-h3 mil-muted mil-thin">ashley.com</p>
+                        <p class="mil-h3 mil-muted mil-thin">nehemiasperez.com</p>
                     </div>
                 </div>
             </div>
@@ -141,7 +149,7 @@
 
                                             <h6 class="mil-muted mil-mb-30">Guatemala</h6>
 
-                                            <p class="mil-light-soft mil-up">contact@nehemiasperez.com<span class="mil-no-wrap">+502 4043-2555</span></p>
+                                            <p class="mil-light-soft mil-up">contacto@nehemiasperez.com<span class="mil-no-wrap">+502 4043-2555</span></p>
 
                                         </div>
                                     </div>
@@ -162,7 +170,9 @@
         <!-- frame -->
         <div class="mil-frame">
             <div class="mil-frame-top">
-                <a href="home-1.html" class="mil-logo">A.</a>
+                <a href="index.html" class="mil-logo">
+                    <img src="img/logo.png" alt="logo" class="mil-logo-img">
+                </a>
                 <div class="mil-menu-btn">
                     <span></span>
                 </div>
@@ -183,100 +193,178 @@
             <div id="swupMain" class="mil-main-transition">
 
                 <!-- banner -->
-                <div class="mil-inner-banner mil-p-0-120">
+                <div class="mil-inner-banner mil-p-0-60">
                     <div class="mil-banner-content mil-center mil-up">
-                        <div class="container">
+                        <div class="container text-center">
                             <ul class="mil-breadcrumbs mil-center mil-mb-60">
-                                <li><a href="home-1.html">Homepage</a></li>
-                                <li><a href="contact.html">Contact</a></li>
+                                <li><a href="index.html">Inicio</a></li>
+                                <li><a href="contact.html">Contacto</a></li>
                             </ul>
-                            <h1 class="mil-mb-60">Get in touch!</h1>
+                            <h1 class="mil-mb-30 text-center">¡Conversemos!</h1>
                             <a href="#contact" class="mil-link mil-dark mil-arrow-place mil-down-arrow">
-                                <span>Send message</span>
+                                <span>Enviar mensaje</span>
                             </a>
                         </div>
+                    </div>
+                    <div class="mil-animation-frame">
+                        <div class="mil-animation mil-position-1 mil-scale" data-value-1="2" data-value-2="2"></div>
+                        <div class="mil-animation mil-position-2 mil-scale" data-value-1="2" data-value-2="2"></div>
+                        <div class="mil-animation mil-position-3 mil-scale" data-value-1="2" data-value-2="2"></div>
                     </div>
                 </div>
                 <!-- banner end -->
 
-                <!-- map -->
-                <div class="mil-map-frame mil-up">
-                    <div class="mil-map">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1396.5769090312324!2d-73.6519672!3d45.5673453!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cc91f8abc30e0ff%3A0xfc6d9cbb49022e9c!2sManoir%20Saint-Joseph!5e0!3m2!1sen!2sua!4v1685485811069!5m2!1sen!2sua" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                    </div>
-                </div>
-                <!-- map end -->
-
                 <!-- contact form -->
-                <section id="contact">
-                    <div class="container mil-p-120-90">
-                        <h3 class="mil-center mil-up mil-mb-120">Let's <span class="mil-thin">Talk</span></h3>
-                        <form class="row align-items-center">
-                            <div class="col-lg-6 mil-up">
-                                <input type="text" placeholder="What's your name">
-                            </div>
-                            <div class="col-lg-6 mil-up">
-                                <input type="email" placeholder="Your Email">
-                            </div>
-                            <div class="col-lg-12 mil-up">
-                                <textarea placeholder="Tell us about our project"></textarea>
-                            </div>
-                            <div class="col-lg-8">
-                                <p class="mil-up mil-mb-30"><span class="mil-accent">*</span> We promise not to disclose your personal information to third parties.</p>
-                            </div>
-                            <div class="col-lg-4">
-                                <div class="mil-adaptive-right mil-up mil-mb-30">
-                                    <button type="submit" class="mil-button mil-arrow-place">
-                                        <span>Send message</span>
-                                    </button>
+                <section id="contact" class="mil-white-bg mil-p-90-90">
+                    <!-- Modificar la animación -->
+                    <div class="mil-animation-frame">
+                        <div class="mil-animation mil-position-1 mil-scale" data-value-1="1" data-value-2="1.2">
+                            <div class="mil-dodecahedron mil-mb-90">
+                                <div class="mil-pentagon">
+                                    <div></div><div></div><div></div><div></div><div></div>
+                                </div>
+                                <div class="mil-pentagon">
+                                    <div></div><div></div><div></div><div></div><div></div>
+                                </div>
+                                <div class="mil-pentagon">
+                                    <div></div><div></div><div></div><div></div><div></div>
+                                </div>
+                                <div class="mil-pentagon">
+                                    <div></div><div></div><div></div><div></div><div></div>
+                                </div>
+                                <div class="mil-pentagon">
+                                    <div></div><div></div><div></div><div></div><div></div>
                                 </div>
                             </div>
-                        </form>
+                        </div>
+                        <div class="mil-animation mil-position-2 mil-scale" data-value-1="1" data-value-2="1.2">
+                            <div class="mil-dodecahedron mil-mb-90">
+                                <div class="mil-pentagon">
+                                    <div></div><div></div><div></div><div></div><div></div>
+                                </div>
+                                <div class="mil-pentagon">
+                                    <div></div><div></div><div></div><div></div><div></div>
+                                </div>
+                                <div class="mil-pentagon">
+                                    <div></div><div></div><div></div><div></div><div></div>
+                                </div>
+                                <div class="mil-pentagon">
+                                    <div></div><div></div><div></div><div></div><div></div>
+                                </div>
+                                <div class="mil-pentagon">
+                                    <div></div><div></div><div></div><div></div><div></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mil-animation mil-position-3 mil-scale" data-value-1="1" data-value-2="1.2">
+                            <div class="mil-dodecahedron mil-mb-90">
+                                <div class="mil-pentagon">
+                                    <div></div><div></div><div></div><div></div><div></div>
+                                </div>
+                                <div class="mil-pentagon">
+                                    <div></div><div></div><div></div><div></div><div></div>
+                                </div>
+                                <div class="mil-pentagon">
+                                    <div></div><div></div><div></div><div></div><div></div>
+                                </div>
+                                <div class="mil-pentagon">
+                                    <div></div><div></div><div></div><div></div><div></div>
+                                </div>
+                                <div class="mil-pentagon">
+                                    <div></div><div></div><div></div><div></div><div></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="container">
+                        <div class="row justify-content-between align-items-center">
+                            <!-- Información de contacto -->
+                            <div class="col-lg-5">
+                                <div class="mil-contact-left-side">
+                                    <h2 class="mil-up">¿Tienes un <span class="mil-thin">proyecto</span> en mente?</h2>
+                                    <p class="mil-text-lg mil-up mil-mb-60">Estoy aquí para ayudarte a hacer realidad tu visión. Contáctame y conversemos sobre tu proyecto.</p>
+                                    
+                                    <div class="mil-contact-info mil-up">
+                                        <div class="mil-contact-info-item">
+                                            <i class="fas fa-envelope mil-accent"></i>
+                                            <div>
+                                                <p>contact@nehemiasperez.com</p>
+                                            </div>
+                                        </div>
+                                        <div class="mil-contact-info-item">
+                                            <i class="fas fa-phone mil-accent"></i>
+                                            <div>
+                                                <p>+502 4043-2555</p>
+                                            </div>
+                                        </div>
+                                        <div class="mil-contact-info-item">
+                                            <i class="fas fa-map-marker-alt mil-accent"></i>
+                                            <div>
+                                                <p>Guatemala</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Formulario -->
+                            <div class="col-lg-6">
+                                <form class="mil-contact-form mil-up" id="contactForm">
+                                    <div class="mil-form-group">
+                                        <div class="mil-mb-30">
+                                            <input type="text" id="name" name="name" placeholder="Tu nombre" required>
+                                        </div>
+                                        <div class="mil-mb-30">
+                                            <input type="email" id="email" name="email" placeholder="Tu correo electrónico" required>
+                                        </div>
+                                    </div>
+                                    <div class="mil-mb-30">
+                                        <textarea id="message" name="message" placeholder="Cuéntame sobre tu proyecto" required rows="4"></textarea>
+                                    </div>
+                                    <div class="mil-form-bottom">
+                                        <p class="mil-text-sm">
+                                            <span class="mil-accent">*</span> Tu información no será compartida con terceros.
+                                        </p>
+                                        <button type="submit" class="mil-button mil-arrow-place">
+                                            <span>Enviar</span>
+                                        </button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
                     </div>
                 </section>
                 <!-- contact form end -->
 
                 <!-- footer -->
-                <footer class="mil-dark-bg">
+                <footer class="mil-black-bg">
                     <div class="mi-invert-fix">
                         <div class="container mil-p-120-60">
                             <div class="row justify-content-between">
                                 <div class="col-md-4 col-lg-4 mil-mb-60">
-
-                                    <div class="mil-muted mil-logo mil-up mil-mb-30"> <img src="img/logo.png" alt="logo" class="mil-logo-img"> </div>
-
-                                    <p class="mil-light-soft mil-up mil-mb-30">Suscríbete a mi blog:</p>
-
-                                    <form class="mil-subscribe-form mil-up">
-                                        <input type="text" placeholder="Ingresa tu correo">
-                                        <button type="submit" class="mil-button mil-icon-button-sm mil-arrow-place"></button>
-                                    </form>
-
+                                    <div class="mil-muted mil-logo mil-up mil-mb-30"> 
+                                        <img src="img/logo-white.png" alt="logo" class="mil-logo-img"> 
+                                    </div>
+                                    <p class="mil-light-soft mil-up mil-mb-15">Diseñador creativo enfocado en crear experiencias digitales únicas y memorables.</p>
+                                    <p class="mil-light-soft mil-up mil-mb-15">¿Listo para dar el siguiente paso?</p>
+                                    <div class="mil-subscribe-form mil-up">
+                                        <input type="email" id="userEmail" placeholder="Tu correo electrónico">
+                                        <button onclick="sendEmail()" class="mil-button mil-icon-button-sm mil-arrow-place"></button>
+                                    </div>
                                 </div>
                                 <div class="col-md-7 col-lg-6">
                                     <div class="row justify-content-end">
                                         <div class="col-md-6 col-lg-7">
-
                                             <nav class="mil-footer-menu mil-mb-60">
                                                 <ul>
-                                                    <li class="mil-up">
-                                                        <a href="index.html">Página de inicio</a>
-                                                    </li>
-                                                    <li class="mil-up">
-                                                        <a href="portfolio.html">Portafolio</a>
-                                                    </li>
-                                                    <li class="mil-up mil-active">
-                                                        <a href="services.html">Servicios</a>
-                                                    </li>
-                                                    <li class="mil-up">
-                                                        <a href="contact.html">Contáctame</a>
-                                                    </li>
-                                                    <li class="mil-up">
-                                                        <a href="blog.html">Blog</a>
-                                                    </li>
+                                                    <li class="mil-up"><a href="index.html">Página de inicio</a></li>
+                                                    <li class="mil-up"><a href="portfolio.html">Portafolio</a></li>
+                                                    <li class="mil-up"><a href="services.html">Servicios</a></li>
+                                                    <li class="mil-up mil-active"><a href="contact.html">Contáctame</a></li>
+                                                    <li class="mil-up"><a href="blog.html">Blog</a></li>
                                                 </ul>
                                             </nav>
-
                                         </div>
                                     </div>
                                 </div>
@@ -284,25 +372,21 @@
 
                             <div class="row justify-content-between flex-sm-row-reverse">
                                 <div class="col-md-7 col-lg-6">
-
                                     <div class="row justify-content-between">
-                                    </div>
-
-                                </div>
-                                <div class="col-md-4 col-lg-6 mil-mb-60">
-
-                                    <div class="mil-vert-between">
-                                        <div class="mil-mb-30">
+                                        <div class="col-lg-6 mil-mb-60">
                                             <ul class="mil-social-icons mil-up">
-                                                <li><a href="#." target="_blank" class="social-icon"> <i class="far fa-circle"></i></a></li>
-                                                <li><a href="#." target="_blank" class="social-icon"> <i class="far fa-circle"></i></a></li>
-                                                <li><a href="#." target="_blank" class="social-icon"> <i class="far fa-circle"></i></a></li>
-                                                <li><a href="#." target="_blank" class="social-icon"> <i class="far fa-circle"></i></a></li>
+                                                <li><a href="https://www.linkedin.com/in/nehemias-perez/" target="_blank" class="social-icon"><i class="fab fa-linkedin"></i></a></li>
+                                                <li><a href="https://www.behance.net/" target="_blank" class="social-icon"><i class="fab fa-behance"></i></a></li>
                                             </ul>
                                         </div>
-                                        <p class="mil-light-soft mil-up">© Copyright 2023 - Mil. All Rights Reserved.</p>
                                     </div>
-
+                                </div>
+                                <div class="col-md-4 col-lg-6 mil-mb-60">
+                                    <div class="mil-vert-between">
+                                        <div class="mil-mb-30">
+                                            <p class="mil-light-soft mil-up">© Copyright 2024 - Nehemias Pérez. All Rights Reserved.</p>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -313,20 +397,6 @@
                 <!-- hidden elements -->
                 <div class="mil-hidden-elements">
                     <div class="mil-dodecahedron">
-                        <div class="mil-pentagon">
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                        </div>
-                        <div class="mil-pentagon">
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                        </div>
                         <div class="mil-pentagon">
                             <div></div>
                             <div></div>
@@ -440,6 +510,41 @@
     <script src="js/plugins/ScrollTo.min.js"></script>
     <!-- ashley js -->
     <script src="js/main.js"></script>
+
+    <!-- Actualizar el script del formulario -->
+    <script>
+    document.getElementById('contactForm').addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevenir el comportamiento por defecto
+
+        // Deshabilitar el botón mientras se envía
+        const submitButton = this.querySelector('button[type="submit"]');
+        submitButton.disabled = true;
+        
+        const templateParams = {
+            name: document.getElementById('name').value,
+            email: document.getElementById('email').value,
+            message: document.getElementById('message').value,
+            anio: new Date().getFullYear()
+        };
+
+        // Enviar correo
+        emailjs.send('service_pg56zrs', 'template_i0wpf7t', templateParams)
+            .then(function() {
+                showPopup('¡Gracias! Tu mensaje ha sido enviado. Pronto me pondré en contacto contigo.');
+                document.getElementById('contactForm').reset();
+            })
+            .catch(function(error) {
+                console.error('Error:', error);
+                showPopup('Hubo un error al enviar el mensaje. Por favor, intenta de nuevo.');
+            })
+            .finally(function() {
+                // Reactivar el botón después de enviar
+                submitButton.disabled = false;
+            });
+
+        return false; // Asegurar que no se recargue la página
+    });
+    </script>
 
 </body>
 

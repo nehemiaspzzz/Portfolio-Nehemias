@@ -1053,9 +1053,10 @@ $(function () {
 
 document.addEventListener('DOMContentLoaded', function() {
     const words = [
+        "Creatividad",
         "Experiencia",
-        "Profesionalismo",
-        "Creatividad"
+        "Compromiso",
+        
     ];
     const speed = 100;
     const deleteSpeed = 50;
@@ -1100,3 +1101,52 @@ document.addEventListener('DOMContentLoaded', function() {
     
     observer.observe(document.querySelector('.typewriter-text'));
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const splineContainer = entry.target;
+                if (!splineContainer.hasAttribute('data-loaded')) {
+                    const viewer = document.createElement('spline-viewer');
+                    viewer.setAttribute('url', 'https://prod.spline.design/zChHgReCHqwt2Wjw/scene.splinecode');
+                    viewer.setAttribute('loading', 'lazy');
+                    splineContainer.appendChild(viewer);
+                    splineContainer.setAttribute('data-loaded', 'true');
+                    
+                    // Desconectar el observer después de cargar
+                    observer.unobserve(splineContainer);
+                }
+            }
+        });
+    }, {
+        rootMargin: '50px 0px',
+        threshold: 0.1
+    });
+
+    // Observar el contenedor de Spline
+    const splineWrapper = document.querySelector('.lazy-spline');
+    if (splineWrapper) {
+        observer.observe(splineWrapper);
+    }
+});
+
+// Optimizar el rendimiento cuando no está visible
+document.addEventListener('scroll', function() {
+    const splineViewer = document.querySelector('spline-viewer');
+    if (splineViewer) {
+        const rect = splineViewer.getBoundingClientRect();
+        const isVisible = (
+            rect.top >= 0 &&
+            rect.left >= 0 &&
+            rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+            rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+        );
+        
+        if (!isVisible) {
+            splineViewer.style.visibility = 'hidden';
+        } else {
+            splineViewer.style.visibility = 'visible';
+        }
+    }
+}, { passive: true });
