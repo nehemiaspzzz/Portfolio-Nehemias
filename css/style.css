@@ -5214,3 +5214,77 @@ spline-viewer {
     color: rgba(255, 255, 255, 0.5);
     font-size: 14px;
 }
+
+/* Estilo para los enlaces del footer */
+.mil-footer-menu ul li a {
+    transition: color 0.3s ease;
+}
+
+.mil-footer-menu ul li a:hover {
+    color: var(--accent-color) !important;
+}
+
+/* También para los iconos sociales */
+.mil-social-icons .social-icon {
+    transition: color 0.3s ease;
+}
+
+.mil-social-icons .social-icon:hover {
+    color: var(--accent-color) !important;
+}
+
+/* Estilo para los enlaces del footer */
+.mil-footer-menu ul li a.mil-light {
+    color: #fff !important;
+    transition: color 0.3s ease;
+}
+
+.mil-footer-menu ul li a.mil-light:hover {
+    color: var(--accent-color) !important;
+    opacity: 1;
+}
+
+/* Para los iconos sociales */
+.mil-social-icons .social-icon.mil-light {
+    color: #fff !important;
+    transition: color 0.3s ease;
+}
+
+.mil-social-icons .social-icon.mil-light:hover {
+    color: var(--accent-color) !important;
+    opacity: 1;
+}
+
+/* Asegurar que el texto activo también sea visible */
+.mil-footer-menu ul li.mil-active a.mil-light {
+    color: #fff !important;
+}
+
+.mil-footer-menu ul li.mil-active a.mil-light:hover {
+    color: var(--accent-color) !important;
+}
+
+/* Ocultar Spline en móvil */
+@media screen and (max-width: 768px) {
+    .lazy-spline {
+        display: none !important;
+    }
+}
+
+/* Logo blanco en menú móvil */
+@media screen and (max-width: 768px) {
+    .mil-menu-frame .mil-frame-top .mil-logo img {
+        content: url('../img/logo-white.png');
+    }
+    
+    .mil-menu-frame {
+        background-color: #1d1d1d;
+    }
+}
+
+/* Asegurar que el logo del frame superior también sea blanco en móvil */
+@media screen and (max-width: 768px) {
+    .mil-frame .mil-frame-top .mil-logo img {
+        content: url('../img/logo-white.png');
+    }
+}
